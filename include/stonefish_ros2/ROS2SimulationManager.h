@@ -65,6 +65,7 @@ namespace sf
     class SSS;
     class MSIS;
     class Joint;
+    class Light;
 
     struct ROS2Robot
 	{
@@ -157,6 +158,9 @@ namespace sf
         void JointBreakService(const std_srvs::srv::Trigger::Request::SharedPtr req, 
                             std_srvs::srv::Trigger::Response::SharedPtr res, Joint* j);
         
+        void LightService(const std_srvs::srv::SetBool::Request::SharePtr req,
+                            std_srvs::srv::SetBool::Response::SharedPtr res, Light* light);
+            
     protected:
         std::string scenarioPath_;
         std::vector<std::shared_ptr<ROS2Robot>> rosRobots_;
