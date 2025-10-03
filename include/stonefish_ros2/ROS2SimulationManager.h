@@ -158,7 +158,7 @@ namespace sf
         void JointBreakService(const std_srvs::srv::Trigger::Request::SharedPtr req, 
                             std_srvs::srv::Trigger::Response::SharedPtr res, Joint* j);
         
-        void LightService(const std_srvs::srv::SetBool::Request::SharePtr req,
+        void LightService(const std_srvs::srv::SetBool::Request::SharedPtr req,
                             std_srvs::srv::SetBool::Response::SharedPtr res, Light* light);
             
     protected:
